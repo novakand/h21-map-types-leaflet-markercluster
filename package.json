@@ -1,0 +1,22 @@
+  "name": "@h21-map-types/leaflet-markerluster",
+  "version": "1.0.1",
+  "scope":"@h21-map-types",
+  "description": "A library of Leaflet Map JS API",
+  "main": "",
+  "types": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/novakand/h21-map-types-leaflet-markerluster"
+  },
+  "keywords": [
+    "leaflet",
+    "leaflet-markerluster",
+    "leaflet-type",
+    "angular"
+  ],
+  "author": "",
+  "license": ""
+}
