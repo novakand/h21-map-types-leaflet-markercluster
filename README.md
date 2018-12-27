@@ -1,8 +1,8 @@
-## @h21-map-types/leaflet-markerluster
+## @h21-map-types/leaflet-markercluster
 
 ## Installation
 ```bash
-npm i @h21-map-types/leaflet-markerluster
+npm i @h21-map-types/leaflet-markercluster
 ```
 ### Details
 ```bash
