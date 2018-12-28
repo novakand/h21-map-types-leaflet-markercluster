@@ -15,7 +15,6 @@ declare module L {
     }
 
     export interface MarkerClusterGroupOptions extends LayerOptions {
-
         showCoverageOnHover?: boolean;
         zoomToBoundsOnClick?: boolean;
         spiderfyOnMaxZoom?: boolean;
@@ -34,9 +33,10 @@ declare module L {
     }
 
     export class MarkerClusterGroup extends FeatureGroup {
-
         addLayers(layers: Layer[]): this;
+        addLayer(layers: Layer): this;
         removeLayers(layers: Layer[]): this;
+        removeLayer(layers: Layer): this;
         clearLayers(): this;
         getVisibleParent(marker: Marker): Marker;
         refreshClusters(clusters?: Marker | Marker[] | LayerGroup | { [index: string]: Layer }): this;
