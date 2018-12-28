@@ -5,14 +5,16 @@
 // TypeScript Version: 2.3
 
 
-    class MarkerCluster extends Marker {
+declare module L {
+
+    export class MarkerCluster extends Marker {
         getAllChildMarkers(): Marker[];
         getChildCount(): number;
         zoomToBounds(): void;
         getBounds(): LatLngBounds;
     }
 
-    interface MarkerClusterGroupOptions extends LayerOptions {
+    export interface MarkerClusterGroupOptions extends LayerOptions {
 
         showCoverageOnHover?: boolean;
         zoomToBoundsOnClick?: boolean;
@@ -31,17 +33,18 @@
         chunkDelay?: number;
     }
 
-    class MarkerClusterGroup extends FeatureGroup {
-      
+    export class MarkerClusterGroup extends FeatureGroup {
+
         addLayers(layers: Layer[]): this;
         removeLayers(layers: Layer[]): this;
         clearLayers(): this;
         getVisibleParent(marker: Marker): Marker;
-        refreshClusters(clusters?: Marker | Marker[] | LayerGroup | {[index: string]: Layer}): this;
+        refreshClusters(clusters?: Marker | Marker[] | LayerGroup | { [index: string]: Layer }): this;
         getChildCount(): number;
         getAllChildMarkers(): Marker[];
         hasLayer(layer: Layer): boolean;
         zoomToShowLayer(layer: Layer, callback?: () => void): void;
     }
 
-    function markerClusterGroup(options?: MarkerClusterGroupOptions): MarkerClusterGroup;
+    export function markerClusterGroup(options?: MarkerClusterGroupOptions): MarkerClusterGroup;
+}
